@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+  <body>
+    <h1>Come eseguire il jailbreak nei computer della scuola</h1>
+    <span>Questa pagina racconta come prendere permessi amministrativi senza autorizzazione nei computer scolastici.</span><br>
+    <span>Non è possibile rompere il computer facendo questo a meno che fai cose che non sono dette. Saltando gli step può danneggiare il sistema Windows, ma non è un danno grave, porterà solo problemi ai programmi di accessibilità, per esempio la tastiera virtuale Win32 che viene aperta premendo <code>WIN+SHIFT+O</code> o con il pulsante di accessibilià fondamentale per fare ciò.</span>
+    <hr>
+    <h2>1. Entrare nel Windows Recovery Environment</h2>
+    <span>Per entrare nel WinRE (Windows Recovery Environment), devi andare su Start, poi cliccare sul pulsante di accensione che trovi nel menu, lo clicchi e poi tieni premuto <code>SHIFT</code> e rinvii il computer tenendo sempre premuto <code>SHIFT</code>.</span><br>
+    <span>Dovresti aspettare e poi ti viene una schermata blu con dei pulsanti. Clicca su "Risoluzione dei problemi" e poi apri il prompt dei comandi (ci metterà un po' di tempo).</span>
+    <h2>2. Sovrascrivere utilman.exe a cmd.exe.</h2>
+    <span>Con il command prompt puoi fare tutto quello che vuoi con il computer con i privilegi amministrativi. Usiamo questo attrezzo per sbloccare il command prompt nella schermata login.</span><br>
+    <code>
+      X:/> C:
+      C:\> cd Windows\System32
+      C:\Windows\System32> ren utilman.exe utilman.exe.backup
+      C:\Windows\System32> copy cmd.exe utilman.exe
+      C:\Windows\System32> exit
+    </code><br>
+    <span><strong>Attenzione!</strong> Il computer può anche avere un'altra lettera del drive invece di C:! Se ce l'ha, allora invece di C: metti la lettera che usa veramente (per esempio D: o F:)</span><br>
+    <h2>3. Diventare amministratore</h2>
+    <span>Puoi diventare amministratore del PC con gli step che abbiamo fatto precedentemente. In questa guida, ti aiutiamo solo a trasformare l'account studente (che potrebbe essere chiamato STUDENTE, UTENTE, o altro, oppure il nome della tua scuola o l'istituto; può essere qualunque cosa)</span>
+    <br><span>Prima di tutto, devi premere il pulsante di accessibilità e poi eseguire questo comando:</span>
+    <code>
+      control userpasswords2
+    </code><br>
+    <span>Ora ti dovrebbe apparire una finestra con tutti gli utenti del computer. Vai sull'utente che ti fanno usare i professori e vai a vedere nelle proprietà il gruppo di utenti e cambialo a "Amministratore".</span><br>
+    <span>Hai finito il processo del jailbreak. Ora chiudi le finestre e fai login e fai quello che ti pare.</span>
+  </body>
+</html>
